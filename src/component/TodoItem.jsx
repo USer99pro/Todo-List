@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import "./TodoItem.css";
 
 function TodoItem({
     todo,

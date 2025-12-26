@@ -1,0 +1,108 @@
+.todo-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #dfe6e9;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.todo-input::placeholder {
+  color: #b2bec3;
+}
+
+/* Date Input */
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: #f8f9fa;
+  border: 2px solid #dfe6e9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.date-input-wrapper:focus-within {
+  border-color: #667eea;
+  background: white;
+}
+
+.date-input-wrapper label {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date-input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  color: #2d3436;
+  font-weight: 600;
+  min-width: 130px;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.date-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Add Button */
+.add-btn {
+  width: 100%;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+
+  .date-input-wrapper {
+    justify-content: space-between;
+  }
+
+  .date-input {
+    flex: 1;
+  }
+}
