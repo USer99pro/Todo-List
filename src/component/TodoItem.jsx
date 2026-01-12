@@ -94,7 +94,7 @@ function TodoItem({
                                                     'normal-bedge'
                                         }`}>
 
-                                        {dayLeft < 0 && `เกิน ${Mate.abs(dayLeft)} วัน`}
+                                        {dayLeft < 0 && `เกิน ${Math.abs(dayLeft)} วัน`}
                                         {dayLeft === 0 && "วันนี้"}
                                         {dayLeft > 0 && `เหลือ ${dayLeft} วัน`}
                                     </span>
@@ -105,11 +105,11 @@ function TodoItem({
                         <div className="todo-content"></div>
 
                         <div className="todo-actions">
-                            <button className="edit-btn" onClick={() => onEdit(todo)} title="เเก้ไข">
+                            <button className="edit-btn" onClick={() => onEdit(todo.id)} title="เเก้ไข">
                                 🖊️
                             </button>
 
-                            <button className="edit-btn" onClick={() => onDelete(todo)} title="ลบ"> 🗑️</button>
+                            <button className="edit-btn" onClick={() => onDelete(todo.id)} title="ลบ"> 🗑️</button>
 
                         </div>
 
@@ -122,3 +122,4 @@ function TodoItem({
         </div>
     )
 }
+export default TodoItem;
